@@ -1,0 +1,83 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 100vh;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: unset;
+
+    padding-right: 80px;
+  }
+}
+
+.tabList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-width: 210px;
+  width: 100%;
+  padding-top: 50px;
+
+  background-color: #eeeeee;
+
+  @media (min-width: 768px) {
+    width: 19%;
+    margin-right: 80px;
+  }
+}
+
+.tab {
+  margin-bottom: 30px;
+
+  &Selected a {
+    background-color: #ec7f62;
+    border: 2px solid #ec7f62;
+    color: #ffffff;
+
+    &:hover {
+      background-color: #f9a690;
+      border: 2px solid #f9a690;
+    }
+  }
+}
+
+.tabButton {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 160px;
+  height: 50px;
+  padding-left: 20px;
+  border: 1px solid #ec7f62;
+
+  font-family: 'SourceSansPro', sans-serif;
+  justify-content: flex-start;
+  font-size: 18px;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.4s;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #f9a690;
+    border: 2px solid #f9a690;
+    transition: all 0.4s;
+  }
+}
+
+.panelWrapper {
+  width: 70%;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-left: 5%;
+  border: 2px solid #e5e5e5;
+
+  overflow-x: auto;
+}

@@ -1,0 +1,370 @@
+@import '../../variables';
+
+.overlay {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  min-width: 220px;
+  max-width: 400px;
+  margin-bottom: 10px;
+}
+
+.modalInput {
+  padding-top: 11px;
+  padding-right: 10px;
+  padding-bottom: 11px;
+  padding-left: 10px;
+  height: 35px;
+
+  border: 1px solid #6d6d6d;
+
+  font-family: 'SourceSansPro', sans-serif;
+  font-size: 14px;
+
+  @media (min-width: $tablet-size) {
+    height: 50px;
+    padding-top: 14px;
+    padding-right: 15px;
+    padding-bottom: 14px;
+    padding-left: 15px;
+  }
+
+  &:first-of-type {
+    margin-bottom: 10px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 20px;
+  }
+}
+
+.sendCallbackButton {
+  height: 40px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  background-color: #ec7f62;
+  color: #ffffff;
+
+  @media (min-width: $tablet-size) {
+    height: 50px;
+    padding-top: 15px;
+    padding-bottom: 11px;
+
+    background-color: transparent;
+    color: #000000;
+  }
+}
+
+.policyWarning {
+  display: none;
+
+  @media (min-width: $tablet-size) {
+    margin-bottom: 20px;
+
+    font-family: 'SourceSansPro', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+
+    &Underline {
+      text-decoration: underline;
+    }
+  }
+}
+
+.writeInstagramMessage {
+  font-family: 'SourceSansPro', sans-serif;
+  font-size: 18px;
+  text-align: center;
+
+  &Link {
+    color: #ec7f62;
+  }
+}
+
+.toCatalogueButtonClick {
+  width: 220px;
+  height: 40px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  background-color: #ec7f62;
+  color: #ffffff;
+
+  @media (min-width: $tablet-size) {
+    width: 280px;
+    height: 50px;
+    padding-top: 15px;
+    padding-bottom: 11px;
+
+    background-color: transparent;
+    color: #000000;
+  }
+}
+
+.footer {
+  margin-left: 20px;
+  padding-top: 27px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  border-top: 3px solid #ec7f62;
+
+  @media (min-width: $tablet-size) {
+    height: 278px;
+    margin-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 15px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  max-width: 815px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-size) {
+    margin-bottom: 54px;
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.phone {
+  margin-bottom: 4px;
+
+  font-family: 'SourceSansPro', sans-serif;
+  font-size: 14px;
+
+  @media (min-width: $tablet-size) {
+    margin-bottom: 10px;
+
+    font-family: 'Candara', sans-serif;
+    font-size: 30px;
+  }
+
+  &Code {
+    display: none;
+
+    @media (min-width: $tablet-size) {
+      display: unset;
+    }
+  }
+}
+
+.callback {
+  border-bottom: 1px solid #000000;
+
+  font-family: 'Candara', sans-serif;
+  font-size: 12px;
+  text-transform: lowercase;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.4s;
+
+  &:hover {
+    border-color: #ec7f62;
+    transition: all 0.4s;
+  }
+
+  @media (min-width: $tablet-size) {
+    margin-bottom: 53px;
+
+    font-size: 20px;
+  }
+}
+
+.mobileSocialMenu {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-size) {
+    display: none;
+  }
+}
+
+.desktopSocialMenu {
+  display: none;
+
+  @media (min-width: $tablet-size) {
+    display: flex;
+
+    align-self: center;
+  }
+}
+
+.socialIcon {
+  position: relative;
+
+  width: 30px;
+  height: 30px;
+
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  cursor: pointer;
+
+  &:nth-of-type(1) {
+    background-image: url('../../assets/images/instagramIcon.svg');
+  }
+
+  &:nth-of-type(2) {
+    background-image: url('../../assets/images/telegramIcon.svg');
+  }
+  &:nth-of-type(3) {
+    background-image: url('../../assets/images/whatsappIcon.svg');
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 45px;
+  }
+
+  & > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+.menu {
+  display: grid;
+  grid-template-areas:
+    'a b'
+    'c d';
+  column-gap: 6px;
+  row-gap: 5px;
+
+  @media (min-width: $tablet-size) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.menuItem {
+  &:nth-of-type(1) {
+    grid-area: a;
+  }
+
+  &:nth-of-type(2) {
+    grid-area: c;
+  }
+
+  &:nth-of-type(3) {
+    grid-area: d;
+
+    text-align: right;
+  }
+
+  &:nth-of-type(4) {
+    grid-area: b;
+  }
+}
+
+.menuLink {
+  border-bottom: 3px solid transparent;
+
+  font-family: 'Candara', sans-serif;
+  font-size: 12px;
+  color: #000000;
+  white-space: nowrap;
+  transition: 0.4s all;
+
+  &:hover {
+    border-bottom: 3px solid #ec7f62;
+
+    transition: 0.4s all;
+  }
+
+  @media (min-width: $tablet-size) {
+    font-size: 24px;
+  }
+}
+
+.policy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 815px;
+  margin: 0 auto;
+}
+
+.policyMessage {
+  font-family: 'SourceSansPro', sans-serif;
+  font-size: 12px;
+  color: #6d6d6d;
+
+  @media (min-width: $tablet-size) {
+    margin-bottom: 15px;
+
+    font-size: 14px;
+  }
+}
+
+.cactusWebLink {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #2a51dc;
+
+  @media (min-width: $tablet-size) {
+    margin-bottom: 15px;
+
+    font-size: 14px;
+
+    &::before {
+      content: 'Разработано';
+
+      display: inline-block;
+
+      width: 82px;
+      height: 18px;
+      margin-right: 5px;
+
+      font-family: 'SourceSansPro', sans-serif;
+      font-size: 14px;
+      color: #6d6d6d;
+    }
+  }
+
+  &::after {
+    content: '';
+
+    display: inline-block;
+
+    width: 15px;
+    height: 12px;
+    margin-bottom: -2px;
+    margin-left: 5px;
+
+    background-image: url('../../assets/images/cactusWebLogo.svg');
+    background-repeat: no-repeat;
+    background-size: 15px 12px;
+
+    @media (min-width: $tablet-size) {
+      width: 23px;
+      height: 18px;
+      margin-left: 1px;
+      margin-bottom: -3px;
+
+      background-size: 23px 18px;
+    }
+  }
+}

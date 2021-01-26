@@ -1,0 +1,418 @@
+@import '../../variables';
+
+.main {
+  position: relative;
+  min-height: 626px;
+}
+
+.carouselWrapper {
+  background-color: transparent;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  min-width: 220px;
+  max-width: 400px;
+  margin-bottom: 10px;
+}
+
+.modalInput {
+  padding-top: 11px;
+  padding-right: 10px;
+  padding-bottom: 11px;
+  padding-left: 10px;
+  height: 35px;
+
+  border: 1px solid #6d6d6d;
+
+  font-family: 'SourceSansPro', sans-serif;
+  font-size: 14px;
+
+  @media (min-width: $tablet-size) {
+    height: 50px;
+    padding-top: 14px;
+    padding-right: 15px;
+    padding-bottom: 14px;
+    padding-left: 15px;
+  }
+
+  &:first-of-type {
+    margin-bottom: 10px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 20px;
+  }
+}
+
+.sendCallbackButton {
+  height: 40px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  font-size: 18px;
+  line-height: 16px;
+  font-family: 'SourceSansPro', sans-serif;
+  background-color: #ec7f62;
+  color: #ffffff;
+
+  @media (min-width: $tablet-size) {
+    height: 50px;
+    padding-top: 15px;
+    padding-bottom: 11px;
+
+    background-color: transparent;
+    color: #000000;
+  }
+}
+
+.policyWarning {
+  display: none;
+
+  @media (min-width: $tablet-size) {
+    margin-bottom: 20px;
+
+    font-family: 'SourceSansPro', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+
+    &Underline {
+      text-decoration: underline;
+    }
+  }
+}
+
+.writeInstagramMessage {
+  font-family: 'SourceSansPro', sans-serif;
+  font-size: 18px;
+  text-align: center;
+
+  &Link {
+    color: #ec7f62;
+  }
+}
+
+.toCatalogueButtonClick {
+  width: 220px;
+  height: 40px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  font-size: 18px;
+  line-height: 16px;
+  font-family: 'SourceSansPro', sans-serif;
+  background-color: #ec7f62;
+  color: #ffffff;
+
+  @media (min-width: $tablet-size) {
+    width: 280px;
+    height: 50px;
+    padding-top: 15px;
+    padding-bottom: 11px;
+
+    background-color: transparent;
+    color: #000000;
+  }
+}
+
+.container {
+  max-width: 1143px;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-right: 37px;
+  padding-bottom: 52px;
+  padding-left: 37px;
+
+  @media (min-width: $tablet-size) {
+    padding-top: 50px;
+    padding-bottom: 120px;
+  }
+}
+
+.mobileGoBackButton {
+  display: inline-block;
+
+  width: 30px;
+  height: 12px;
+  margin-bottom: 15px;
+
+  background-image: url('../../assets/images/buttonArrowIconBlack.svg');
+  background-repeat: no-repeat;
+  background-size: 30px 12px;
+  transform: rotate(180deg);
+  cursor: pointer;
+
+  @media (min-width: 1097px) {
+    display: none;
+  }
+}
+
+.productContainer {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 31px;
+
+  @media (min-width: 1097px) {
+    flex-direction: row;
+  }
+}
+
+.photos {
+  position: relative;
+
+  max-width: 300px;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 20px;
+  border: 1px solid #6d6d6d;
+
+  @media (min-width: $tablet-size) {
+    max-width: unset;
+    width: 550px;
+    height: 550px;
+    margin-right: 70px;
+  }
+}
+
+.photo {
+  height: 298px;
+  object-fit: contain;
+
+  @media (min-width: $tablet-size) {
+    width: 550px;
+    height: 548px;
+  }
+}
+
+.leftArrow {
+  left: 21px;
+}
+
+.rightArrow {
+  right: 21px;
+}
+
+.productInfo {
+  position: relative;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  max-width: 460px;
+  width: 100%;
+
+  font-family: 'SourceSansPro', sans-serif;
+}
+
+.goBackButton {
+  cursor: pointer;
+
+  @media (min-width: 1097px) {
+    position: absolute;
+    right: 0;
+
+    width: 20px;
+    height: 20px;
+
+    background-image: url('../../assets/images/exitIcon.svg');
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+  }
+}
+
+.colors {
+  margin-bottom: 2px;
+
+  @media (min-width: $tablet-size) {
+    order: 4;
+  }
+}
+
+.colorLabel {
+  display: none;
+
+  @media (min-width: $tablet-size) {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family: 'SourceSansPro', sans-serif;
+    font-size: 24px;
+  }
+}
+
+.imageLink {
+  &:not(:last-of-type) {
+    margin-right: 10px;
+
+    @media (min-width: $tablet-size) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.imagePreview {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #d5d5d5;
+
+  object-fit: contain;
+
+  @media (min-width: $tablet-size) {
+    width: 100px;
+    height: 100px;
+  }
+
+  &Current {
+    border: 1px solid #ec7f62;
+
+    @media (min-width: $tablet-size) {
+      border-width: 2px;
+    }
+  }
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: 600;
+
+  @media (min-width: $tablet-size) {
+    order: 1;
+
+    margin-bottom: 5px;
+
+    font-size: 36px;
+  }
+}
+
+.model {
+  margin-bottom: 5px;
+
+  font-size: 18px;
+
+  @media (min-width: $tablet-size) {
+    order: 2;
+
+    margin-bottom: 20px;
+
+    font-size: 30px;
+  }
+}
+
+.price {
+  margin-bottom: 15px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  @media (min-width: $tablet-size) {
+    order: 3;
+
+    margin-bottom: 8px;
+
+    font-size: 30px;
+  }
+}
+
+.sizesWrapper {
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-size) {
+    order: 5;
+  }
+}
+
+.sizeLabel {
+  margin-bottom: 5px;
+
+  font-size: 14px;
+
+  @media (min-width: $tablet-size) {
+    margin-bottom: 8px;
+
+    font-size: 24px;
+  }
+}
+
+.sizes {
+  max-width: 170px;
+  height: 30px;
+  margin-bottom: 5px;
+  border: 1px solid #6d6d6d !important;
+  border-radius: unset !important;
+  box-shadow: none !important;
+
+  font-size: 12px;
+
+  @media (min-width: $tablet-size) {
+    max-width: 300px;
+    height: 40px;
+
+    font-size: 20px;
+  }
+}
+
+.faqButton {
+  font-size: 12px;
+  color: #000000;
+  text-decoration: underline;
+
+  @media (min-width: $tablet-size) {
+    font-size: 16px;
+  }
+}
+
+.buyButton {
+  display: inline-block;
+
+  width: 170px;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  font-family: 'SourceSansPro', sans-serif;
+  background-color: #ec7f62;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 17px;
+
+  @media (min-width: $tablet-size) {
+    order: 6;
+
+    font-size: 24px;
+    line-height: 30px;
+    width: 300px;
+    height: 50px;
+
+    background-color: transparent;
+    color: #000000;
+    line-height: 30px;
+  }
+}
+
+.priceWarning {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+
+  @media (min-width: $tablet-size) {
+    order: 7;
+
+    max-width: 214px;
+
+    font-size: 18px;
+  }
+}
